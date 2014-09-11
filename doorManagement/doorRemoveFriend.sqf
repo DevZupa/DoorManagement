@@ -1,5 +1,5 @@
 private ["_list","_plots","_thePlot","_friends"];
-
+systemChat "Removing";
 _pos = _this select 0;
 if (_pos < 0) exitWith {};
 _friends = TheDoor getVariable ["doorfriends", []];

@@ -40,7 +40,7 @@ class DoorManagement
 			y = 0.70 * safezoneH + safezoneY;
 			w = 0.08 * safezoneW;
 			h = 0.06 * safezoneH;
-			onButtonClick = "[(lbCurSel 7101)] call PlotAddFriend;";
+			onButtonClick = "[(lbCurSel 7101)] call DoorAddFriend;";
 		};
 		class RscShortcutButton_7105: RscShortcutButton
 		{
@@ -50,7 +50,7 @@ class DoorManagement
 			y = 0.70 * safezoneH + safezoneY;
 			w = 0.08 * safezoneW;
 			h = 0.06 * safezoneH;
-			onButtonClick = "[(lbCurSel 7102)] call PlotRemoveFriend;";
+			onButtonClick = "[(lbCurSel 7102)] call DoorRemoveFriend;";
 		};	
 		class RscShortcutButton_7106: RscShortcutButton
 		{
@@ -76,7 +76,7 @@ class DoorManagement
 		class RscText_7108: RscTextT
 		{
 			idc = 7108;
-			text = "Humans Nearby";
+			text = "Online People";
 			x = 0.31 * safezoneW + safezoneX;
 			y = 0.38 * safezoneH + safezoneY;
 			w = 0.13 * safezoneW;

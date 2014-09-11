@@ -1,8 +1,4 @@
-/*
-	DayZ Unlock Door
-	Usage: [_obj] call player_unlockDoor;
-	Made for DayZ Epoch please ask permission to use/edit/distrubute email vbawol@veteranbastards.com.
-*/
+/* Zupa Door Management */
 private ["_display","_obj","_objectCharacterID"];
 
 if(!isNil "DZE_DYN_UnlockDoorInprogress") exitWith { cutText [(localize "str_epoch_player_21") , "PLAIN DOWN"]; };
@@ -10,48 +6,51 @@ if(!isNil "DZE_DYN_UnlockDoorInprogress") exitWith { cutText [(localize "str_epo
 DZE_DYN_UnlockDoorInprogress = true;
 
 if(!isNull dayz_selectedDoor) then {
-
+	_display = findDisplay 41144;
+	_display closeDisplay 1;
 	// our target
-	_obj = dayz_selectedDoor;
-
-	_notNearestPlayer = _obj call dze_isnearest_player;
-
+	_notNearestPlayer = false;
 	if (_notNearestPlayer) then {
 		// close display since another player is closer		
 		cutText [(localize "STR_EPOCH_ACTIONS_16"), "PLAIN DOWN"];
 	} else {
-	
-		// get object combination
-		_allowedComplex 	= _obj getVariable ["doorfriends","0"];
-		
+		_allowedComplex 	=  dayz_selectedDoor getVariable ["doorfriends",[]];	
+		_ownerID = dayz_selectedDoor getVariable ["OwnerPUID","-1"];	
+		if(isNil "_ownerID")then{
+		 _ownerID = -1;
+		};		
 		_allowed = [];
 		{
 		  _friendUID = _x select 0;
 		  _allowed  =  _allowed  + [_friendUID];
-		} forEach _allowedComplex;
-		
+		} forEach _allowedComplex;	
+		_allowed = _allowed + [_ownerID];	
 		// Check allowed
-		if ( (getPlayerUID player) in _allowed) then {
+		if ( (getPlayerUID player) in _allowed ) then {
+		
+		     DZE_Lock_Door = dayz_selectedDoor getVariable['CharacterID','0'];
 			
-			sleep 3; // to make it realistic, not instantly opening door.
+			cutText ["Scanning", "PLAIN DOWN"];
+			
+			sleep 2; // to make it realistic, not instantly opening door.
 			// unlock if locked
-			if(_obj animationPhase "Open_hinge" == 0) then {
-				_obj animate ["Open_hinge", 1];
-			};
-
-			if(_obj animationPhase "Open_latch" == 0) then {
-				_obj animate ["Open_latch", 1];
-			};
-
-		} else {
-
-			[10,10] call dayz_HungerThirst;
 			
-			[player,"combo_locked",0,false] call dayz_zombieSpeak;
-			[player,20,true,(getPosATL player)] spawn player_alertZombies;
+			cutText ["Eye Scan SUCCESS.", "PLAIN DOWN"];
+			
+			if(dayz_selectedDoor animationPhase "Open_hinge" == 0) then {
+				dayz_selectedDoor animate ["Open_hinge", 1];
+			};
 
-			cutText ["You are not allowed to open this door.", "PLAIN DOWN"];
+			if(dayz_selectedDoor animationPhase "Open_latch" == 0) then {
+				dayz_selectedDoor animate ["Open_latch", 1];
+			};
+			
+		
+			
+		} else {
+			cutText ["Eye Scan FAILED.", "PLAIN DOWN"];
 		};
 	};
 };
+
 DZE_DYN_UnlockDoorInprogress = nil;
