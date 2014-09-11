@@ -1,4 +1,8 @@
+if(count(_this) > 0)then{
+TheDoor = _this select 0;
+}else{
 TheDoor = dayz_selectedDoor;
+};
 _display = findDisplay 41144;
 _display closeDisplay 3000;
 _canOpen = false;

@@ -32,7 +32,7 @@ if(!isNull dayz_selectedDoor) then {
 			
 			cutText ["Scanning", "PLAIN DOWN"];
 			
-			sleep 2; // to make it realistic, not instantly opening door.
+			sleep DZE_ScanTime; // to make it realistic, not instantly opening door.
 			// unlock if locked
 			
 			cutText ["Eye Scan SUCCESS.", "PLAIN DOWN"];

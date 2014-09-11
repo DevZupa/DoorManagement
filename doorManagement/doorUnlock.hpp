@@ -64,7 +64,7 @@ class ComboLockUI
 					x = 0.30 * safezoneW + safezoneX;
 					y = 0.55 * safezoneH + safezoneY;			
 					w = 0.20;
-					onButtonClick = "call player_manageDoor";			
+					onButtonClick = "[] call player_manageDoor";			
 				};				
 	};	
 };
