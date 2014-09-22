@@ -1,5 +1,5 @@
 class Entercode {
-	idd = 41144;
+	idd = 51144;
 	movingenable = 0;
 	
 	class Controls {
@@ -13,7 +13,7 @@ class Entercode {
 		};
 		
 		class top_combo : RscPicture {
-			idc = 17734;
+			idc = 15734;
 			text = "\z\addons\dayz_epoch\ui\top_0.paa";
 			x = 0.418883;
 			y = 0.234042;
@@ -22,7 +22,7 @@ class Entercode {
 		};
 		
 		class middle_combo : RscPicture {
-			idc = 17735;
+			idc = 15735;
 			text = "\z\addons\dayz_epoch\ui\mid_0.paa";
 			x = 0.420213;
 			y = 0.431049;
@@ -31,7 +31,7 @@ class Entercode {
 		};
 		
 		class bottom_combo : RscPicture {
-			idc = 17736;
+			idc = 15736;
 			text = "\z\addons\dayz_epoch\ui\bot_0.paa";
 			x = 0.420212;
 			y = 0.616233;
@@ -40,7 +40,7 @@ class Entercode {
 		};
 		
 		class unlock_combo : RscPicture {
-			idc = 17737;
+			idc = 15737;
 			text = "\z\addons\dayz_epoch\ui\unlock_a.paa";
 			x = 0.219415;
 			y = 0.762017;
@@ -49,7 +49,7 @@ class Entercode {
 		};
 		
 		class exit_combo : RscPicture {
-			idc = 17738;
+			idc = 15738;
 			text = "\z\addons\dayz_epoch\ui\exit_a.paa";
 			x = 0.863032;
 			y = 0.0252169;
@@ -77,7 +77,7 @@ class Entercode {
 			y = 0.243893;
 			w = 0.1625;
 			h = 0.135461;
-			onButtonClick = "[17734,1,""top""] call player_changeCombo";
+			onButtonClick = "[15734,1,""top""] call player_changeCombo";
 		};
 		
 		class top_right : main_combo {
@@ -86,7 +86,7 @@ class Entercode {
 			y = 0.241923;
 			w = 0.147872;
 			h = 0.135461;
-			onButtonClick = "[17734,0,""top""] call player_changeCombo";
+			onButtonClick = "[15734,0,""top""] call player_changeCombo";
 		};
 		
 		class mid_left : main_combo {
@@ -95,7 +95,7 @@ class Entercode {
 			y = 0.433018;
 			w = 0.1625;
 			h = 0.135461;
-			onButtonClick = "[17735,1,""mid""] call player_changeCombo";
+			onButtonClick = "[15735,1,""mid""] call player_changeCombo";
 		};
 		
 		class mid_right : main_combo {
@@ -104,7 +104,7 @@ class Entercode {
 			y = 0.427108;
 			w = 0.153191;
 			h = 0.135461;
-			onButtonClick = "[17735,0,""mid""] call player_changeCombo";
+			onButtonClick = "[15735,0,""mid""] call player_changeCombo";
 		};
 		
 		class bottom_left : main_combo {
@@ -113,7 +113,7 @@ class Entercode {
 			y = 0.637904;
 			w = 0.1625;
 			h = 0.135461;
-			onButtonClick = "[17736,1,""bot""] call player_changeCombo";
+			onButtonClick = "[15736,1,""bot""] call player_changeCombo";
 		};
 		
 		class bottom_right : main_combo {
@@ -122,7 +122,7 @@ class Entercode {
 			y = 0.633964;
 			w = 0.155851;
 			h = 0.133491;
-			onButtonClick = "[17736,0,""bot""] call player_changeCombo";
+			onButtonClick = "[15736,0,""bot""] call player_changeCombo";
 		};
 		
 		class exit_combo_btn : main_combo {

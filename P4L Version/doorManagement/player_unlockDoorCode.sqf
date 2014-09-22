@@ -20,7 +20,7 @@ if(!isNull dayz_selectedDoor) then {
 
 	if (_notNearestPlayer) then {
 		// close display since another player is closer
-		_display = findDisplay 41144;
+		_display = findDisplay 51144;
 		_display closeDisplay 3000;
 		cutText [(localize "STR_EPOCH_ACTIONS_16"), "PLAIN DOWN"];
 	} else {
@@ -34,7 +34,7 @@ if(!isNull dayz_selectedDoor) then {
 			[player,"combo_unlock",0,false] call dayz_zombieSpeak;
 
 			// close display
-			_display = findDisplay 41144;
+			_display = findDisplay 51144;
 			_display closeDisplay 3000;
 
 			// unlock if locked
@@ -55,7 +55,7 @@ if(!isNull dayz_selectedDoor) then {
 				[player,"scream",0,false] call dayz_zombieSpeak;
 				[player,20,true,(getPosATL player)] spawn player_alertZombies;
 				titleCut ["","WHITE IN",1];
-				_display = findDisplay 41144;
+				_display = findDisplay 51144;
 				_display closeDisplay 3000;
 
 				if (isNil 'KeyCodeTry') then {KeyCodeTry = 0;};
@@ -91,7 +91,7 @@ if(!isNull dayz_selectedDoor) then {
 					if (isNil 'KeyCodeTryTimer') then {KeyCodeTryTimer = diag_tickTime+10;};
 				
 					cutText [(localize "str_epoch_player_19"), "PLAIN DOWN"];
-					_display = findDisplay 41144;
+					_display = findDisplay 51144;
 					_display closeDisplay 3000;
 				};			
 			};
@@ -100,7 +100,7 @@ if(!isNull dayz_selectedDoor) then {
 } else {
 	
 	// close display since no target
-	_display = findDisplay 41144;
+	_display = findDisplay 51144;
 	_display closeDisplay 3000;
 };
 DZE_DYN_UnlockDoorInprogress = nil;
