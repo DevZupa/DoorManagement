@@ -56,7 +56,7 @@ class ComboLockUI
 			y = 0.50 * safezoneH + safezoneY;					
 			style = 2;
 			w = 0.20;
-			onButtonClick = "call player_codeDoor";					
+			onButtonClick = "call player_enterCode";					
 		};
 		
 		class ZupaButton_2: RscShortcutButton
