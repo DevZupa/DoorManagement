@@ -189,7 +189,50 @@
 #define MB_BUTTON_CANCEL  2
 #define MB_BUTTON_USER    4
 
+class RscBackground
+{
+	type = 0;
+	style = ST_BACKGROUND;
+	shadow = 2;
+	colorBackground[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	font = "Zeppelin32";
+	sizeEx = 0.02;
+	text = "";
+	
+};
 
+class RscButton
+{
+	access = 0;
+	type = 1;
+	text = "";
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorBackground[] = {0.45,0.45,0.45,1};
+	colorBackgroundDisabled[] = {0,0,0,0.5};
+	colorBackgroundActive[] = {0.75,0.75,0.75,1};
+	colorFocused[] = {0.75,0.75,0.75,1};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,1};
+	soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+	soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+	soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+	style = 2;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	shadow = 2;
+	font = "Zeppelin32";
+	sizeEx = 0.03921;
+	offsetX = 0.003;
+	offsetY = 0.003;
+	offsetPressedX = 0.002;
+	offsetPressedY = 0.002;
+	borderSize = 0;
+};
 
 class RscFrame
 {
@@ -269,7 +312,9 @@ class RscListBox
 	colorSelectBackground[] = {0,0,0,1};
 	colorSelectBackground2[] = {0.8784,0.8471,0.651,1};
 	colorBackground[] = {0,0,0,1};
-	
+	soundSelect[] = {"",0.1,1};
+	soundExpand[] = {"",0.1,1};
+	soundCollapse[] = {"",0.1,1};
 	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
 	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
 	class ScrollBar
@@ -390,4 +435,44 @@ class RscStructuredText
 	text = "";
 	size = 0.03921;
 	shadow = 2;
+};
+
+class RscCombo
+{
+	access = 0;
+	type = 4;
+	style = 0;
+	colorSelect[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,1};
+	colorScrollbar[] = {1,0,0,1};
+	soundSelect[] = {"",0.1,1};
+	soundExpand[] = {"",0.1,1};
+	soundCollapse[] = {"",0.1,1};
+	maxHistoryDelay = 1;
+	class ScrollBar
+	{
+		color[] = {1,1,1,1};
+		colorActive[] = {0.8784,0.8471,0.651,1};
+		colorDisabled[] = {0.8784,0.8471,0.651,1};
+		shadow = 0;
+		thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+		arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+		arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+		border = "\ca\ui\data\ui_border_scroll_ca.paa";
+	};
+	x = 0;
+	y = 0;
+	w = 0.12;
+	h = 0.035;
+	shadow = 0;
+	colorSelectBackground[] = {1,1,1,0.7};
+	arrowEmpty = "\ca\ui\data\ui_arrow_combo_ca.paa";
+	arrowFull = "\ca\ui\data\ui_arrow_combo_active_ca.paa";
+	wholeHeight = 0.45;
+	color[] = {0,0,0,0.6};
+	colorActive[] = {1,0,0,1};
+	colorDisabled[] = {1,1,1,0.25};
+	font = "Zeppelin32";
+	sizeEx = 0.03921;
 };
