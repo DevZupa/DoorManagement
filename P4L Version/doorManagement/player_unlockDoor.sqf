@@ -15,7 +15,7 @@ if(!isNull dayz_selectedDoor) then {
 		cutText [(localize "STR_EPOCH_ACTIONS_16"), "PLAIN DOWN"];
 	} else {
 		_allowedComplex 	=  dayz_selectedDoor getVariable ["doorfriends",[]];	
-		_ownerID = dayz_selectedDoor getVariable ["OwnerPUID","-1"];	
+		_ownerID = dayz_selectedDoor getVariable ["ownerPUID","-1"];	
 		if(isNil "_ownerID")then{
 		 _ownerID = -1;
 		};		

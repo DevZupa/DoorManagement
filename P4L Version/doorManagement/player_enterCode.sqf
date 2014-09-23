@@ -1,6 +1,6 @@
-if(AllowManualCode)then{
 _display = findDisplay 411444;
-_display closeDisplay 1;
+_display closeDisplay 3000;
+if(AllowManualCode)then{
 DZE_Lock_Door != (this getvariable['CharacterID','0']);
 DZE_topCombo = 0;	
 DZE_midCombo = 0;
