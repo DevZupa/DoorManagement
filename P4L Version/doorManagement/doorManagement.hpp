@@ -32,7 +32,7 @@ class DoorManagement
 			soundSelect[] = {"",0.1,1};
 			colorBackground[] = {0.1,0.1,0.1,0.8};
 		};
-		class RscShortcutButton_7104: RscShortcutButton
+		class RscShortcutButton_7104: Zupa_RscButtonMenu
 		{
 			idc = 7104;
 			text = "Add";
@@ -42,7 +42,7 @@ class DoorManagement
 			h = 0.06 * safezoneH;
 			onButtonClick = "[(lbCurSel 7101)] call DoorAddFriend;";
 		};
-		class RscShortcutButton_7105: RscShortcutButton
+		class RscShortcutButton_7105: Zupa_RscButtonMenu
 		{
 			idc = 7105;
 			text = "Delete";
@@ -52,7 +52,7 @@ class DoorManagement
 			h = 0.06 * safezoneH;
 			onButtonClick = "[(lbCurSel 7102)] call DoorRemoveFriend;";
 		};	
-		class RscShortcutButton_7106: RscShortcutButton
+		class RscShortcutButton_7106: Zupa_RscButtonMenu
 		{
 			idc = 7106;
 			text = "Close";

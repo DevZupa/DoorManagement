@@ -37,7 +37,7 @@ class ComboLockUI
 		};
 		
 					
-		class ZupaButton_1 : RscShortcutButton
+		class ZupaButton_1 : Zupa_RscButtonMenu
 		{
 			idc = -1;
 			text = "Eye Scan";
@@ -48,7 +48,7 @@ class ComboLockUI
 			onButtonClick = "call player_unlockDoor";					
 		};
 		
-		class ZupaButton_4 : RscShortcutButton
+		class ZupaButton_4 : Zupa_RscButtonMenu
 		{
 			idc = -1;
 			text = "Manual Code";
@@ -59,7 +59,7 @@ class ComboLockUI
 			onButtonClick = "call player_enterCode";					
 		};
 		
-		class ZupaButton_2: RscShortcutButton
+		class ZupaButton_2: Zupa_RscButtonMenu
 		{
 			idc = -1;
 			text = "Cancel";
@@ -69,7 +69,7 @@ class ComboLockUI
 			onButtonClick = "((ctrlParent (_this select 0)) closeDisplay 3000);";			
 		};		
 
-		class ZupaButton_3: RscShortcutButton
+		class ZupaButton_3: Zupa_RscButtonMenu
 		{
 			idc = -1;
 			text = "Manage";
