@@ -32,10 +32,7 @@ if(!isNull dayz_selectedDoor) then {
 			
 			cutText ["Scanning", "PLAIN DOWN"];
 			
-			sleep 2; // to make it realistic, not instantly opening door.
 			// unlock if locked
-			
-			cutText ["Eye Scan SUCCESS.", "PLAIN DOWN"];
 			
 			if(dayz_selectedDoor animationPhase "Open_hinge" == 0) then {
 				dayz_selectedDoor animate ["Open_hinge", 1];
@@ -45,7 +42,7 @@ if(!isNull dayz_selectedDoor) then {
 				dayz_selectedDoor animate ["Open_latch", 1];
 			};
 			
-		
+			cutText ["Eye Scan SUCCESS.", "PLAIN DOWN"];
 			
 		} else {
 			cutText ["Eye Scan FAILED.", "PLAIN DOWN"];
